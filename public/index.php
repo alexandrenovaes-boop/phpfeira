@@ -1,7 +1,7 @@
 <?php
 include '../config/conexao.php';
 include '../controllers/JogosController.php';
-include '../views/layouts/hearder.php'
+//include '../views/layouts/hearder.php'
 
 $controller = new JogosController($conexao);
 
@@ -35,7 +35,7 @@ if (isset($_GET['action'])){
           break;
 
     }
-} else{
+ }else{
     $jogos = $controller->Listar();
     include '../views/jogos/index.php';
 
