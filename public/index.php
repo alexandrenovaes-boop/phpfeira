@@ -17,27 +17,27 @@ if (isset($_GET['action'])){
 
         case 'editar':
             if($id){
-            $jogos = $controller->Buscar($id);
+            $jogos = $controller->buscar($id);
             include '../views/jogos/editar.php';
             }
             break;
         case 'deletar':
             if($id){
-            $controller->Deletar($id);
+            $controller->deletar($id);
             header("Location: /public/index.php?mensagem=Jogo Deletado com sucesso! ");
             exit();
             }    
             break;
         
      default:
-          $jogos = $controller->Listar();
-          include '../views/jogos/index.php';
+          $jogos = $controller->listar();
+          include '../views/jogos/home.php';
           break;
 
     }
  }else{
-    $jogos = $controller->Listar();
-    include '../views/jogos/index.php';
+    $jogos = $controller->listar();
+    include '../views/jogos/home.php';
 
 }   
-include '../views/layouts/footer.php';
+//include '../views/layouts/footer.php';

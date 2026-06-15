@@ -8,7 +8,7 @@
         <th>Gênero</th>
         <th>Ações</th>
     </tr>
-    <?php while($linha = $filmes ->fetch_assoc()): ?>
+    <?php while($linha = $jogos ->fetch_assoc()): ?>
         <tr>
             <td><?=htmlspecialchars(string: $linha['nome']) ?></td>
             <td><?=htmlspecialchars(string: $linha['ano']) ?></td>
@@ -20,6 +20,6 @@
                 
             </td>
         </tr>
-            <?php endwhile; ?> //endwhile o seu papel é o fechamento como as chaves{}//
+            <?php endwhile; //endwhile o seu papel é o fechamento como as chaves{}//?> 
 </table>
 <a href="?action=adicionar">Cadastro</a>
