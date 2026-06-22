@@ -1,0 +1,18 @@
+<!--form em php-->
+<form action="../../controllers/JogosController.php" method="post">
+<input type="hidden" name="id" id= "id"> <br>
+<label for="nome">Nome</label>
+<input type="text" name="nome" id="nome"><br>
+<label for="ano">Ano:</label>
+<input type="number" step="1" min ="1960" max="2026" name="ano" id= "ano" ><br>
+<label for="nota">Nota</label>
+<input type="number" name="nota" id="nota" step="0,1" min="0" max="5" id="nota" ><br>
+<label for="preco">Gênero</label>
+<select name="genero" id="genero">
+     <option value="acao">Ação</option>
+     <option value="terror">Terror</option>
+     <option value="dupla">Dois Jogadores</option>
+     <option value="historias">Histórias</option>
+</select>
+    <input type="submit" value="Salvar">
+</form>

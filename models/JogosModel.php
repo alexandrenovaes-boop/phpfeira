@@ -23,6 +23,19 @@ class JogosModel {
         //Código de Buscar
     }
      public function adicionarJogos(){
+        $sql ="INSERT INTO jogos (nome, ano, nota, genero) VALUES (?,?,?,?)";
+
+if ($stmt = $conn->prepare($sql)){
+    
+   $stmt->bind_param("sids", $nome, $ano, $nota, $genero);
+   $stmt->execute();
+    //echo"Cadastro realizado com sucesso!";
+   header('Location:  ./index.php?sucesso=1');
+}
+  else{
+    echo "ERRO: ".$sql. "<br>" .$conn->error; 
+  }
+  $stmt->close();
         //Código de Adicionar
     }
      public function atualizarJogos(){
