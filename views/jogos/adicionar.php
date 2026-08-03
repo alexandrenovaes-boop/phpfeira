@@ -1,6 +1,6 @@
 <?php
-include '../config/conexao.php';
-include '../controllers/JogosControllers.php'
+include ROOT_PATH .'../config/conexao.php';
+include CONTROLLER_PATH.'/JogosController.php';
 
          $nome = $_POST['nome'];
          $ano = $_POST ['ano'];

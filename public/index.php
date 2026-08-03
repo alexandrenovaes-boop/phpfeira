@@ -12,7 +12,7 @@ if (isset($_GET['action'])){
 
     switch ($action){
         case 'adicionar':
-            include '../views/jogos/adicionar.php';
+            include '../views/jogos/adicionar.html';
             break;
 
         case 'editar':

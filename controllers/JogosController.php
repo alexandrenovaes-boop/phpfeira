@@ -18,14 +18,15 @@ class JogosController{
          $nota = $_POST ['nota'];
          $genero = $_POST ['genero'];
          return $this->jogosModel-> adicionarJogos($nome, $ano, $nota, $genero);
-          header('Location: ../public/index.php?mensagem=Filme adicionado com sucesso!');
-    } 
-    else{
-       header('Location: ../public/index.php?mensagem=Erro ao adicionar o jogo!');
-    } 
-    {
-        }
+        if ($resultado) {
+        header('Location: ../public/index.php?mensagem=Jogo adicionado com sucesso!');
+    } else {
+        header('Location: ../public/index.php?mensagem=Erro ao adicionar o jogo!');
+    }
 
+    exit();
+}
+    
    public function editar ($id, $nome, $ano, $nota, $genero){
          return $this->jogosModel-> atualizarJogos($id, $nome, $ano, $nota, $genero);
 
